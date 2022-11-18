@@ -1,0 +1,16 @@
+.meta-red-btn{
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 107, 114, 0.1);
+    border: solid #ff6b72;
+    border-width: 1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.meta-red-btn img {
+    width: 19px;
+}
