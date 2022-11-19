@@ -1,32 +1,37 @@
 import "./styles.css"
 import NotificationButton from "../NotificationButton"
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
+import { useState } from "react"
 
 function SalesCard() {
+    const yearAgo = new Date(new Date().setDate(new Date().getDate() - 365))
+    const [minDate, setMinDate] = useState(yearAgo)
+    const [maxDate, setMaxDate] = useState(new Date())
+
     return (
-        <div className="dsmeta-card">
-            <h2 className="dsmeta-sales-title">Vendas</h2>
+        <div className="meta-card">
+            <h2 className="meta-sales-title">Vendas</h2>
             <div>
-                <div className="dsmeta-form-control-container">
+                <div className="meta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
-                        onChange={(date: Date) => { }}
+                        selected={minDate}
+                        onChange={(date: Date) => { setMinDate(date) }}
                         className="meta-form-control"
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
-                <div className="dsmeta-form-control-container">
+                <div className="meta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
-                        onChange={(date: Date) => { }}
+                        selected={maxDate}
+                        onChange={(date: Date) => { setMaxDate(date) }}
                         className="meta-form-control"
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
             </div>
             <div>
-                <table className="dsmeta-sales-table">
+                <table className="meta-sales-table">
                     <thead>
                         <tr>
                             <th className="show992">ID</th>
@@ -47,7 +52,7 @@ function SalesCard() {
                             <td className="show992">11</td>
                             <td>R$ 55300.00</td>
                             <td>
-                                <div className="dsmeta-red-btn-container">
+                                <div className="meta-red-btn-container">
                                     <NotificationButton />
                                 </div>
                             </td>
@@ -60,7 +65,7 @@ function SalesCard() {
                             <td className="show992">11</td>
                             <td>R$ 55300.00</td>
                             <td>
-                                <div className="dsmeta-red-btn-container">
+                                <div className="meta-red-btn-container">
                                     <NotificationButton />
                                 </div>
                             </td>
@@ -73,7 +78,7 @@ function SalesCard() {
                             <td className="show992">11</td>
                             <td>R$ 55300.00</td>
                             <td>
-                                <div className="dsmeta-red-btn-container">
+                                <div className="meta-red-btn-container">
                                     <NotificationButton />
                                 </div>
                             </td>
