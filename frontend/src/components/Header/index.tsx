@@ -9,7 +9,7 @@ function Header() {
                 <h1>Meta</h1>
                 <p>
                     Desenvolvido por
-                    <a href="https://github.com/angelcomp?tab=repositories">angelcomp</a>
+                    <a href="https://github.com/angelcomp?tab=repositories"> angelcomp</a>
                 </p>
             </div>
         </header>
